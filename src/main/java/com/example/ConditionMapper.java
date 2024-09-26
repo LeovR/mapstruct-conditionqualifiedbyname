@@ -9,7 +9,7 @@ import org.mapstruct.Named;
 public interface ConditionMapper {
 
     // This does not work
-    @Mapping(target = "name", source = ".", conditionQualifiedByName = "condition")
+    @Mapping(target = "name", source = "model", conditionQualifiedByName = "condition")
     // This works
     @Mapping(target = "name2", source = "name", conditionQualifiedByName = "condition")
     Target mapModel(Model model);
